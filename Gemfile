@@ -6,7 +6,12 @@ gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
+gem "autoprefixer-rails"
 gem 'sass-rails', '~> 5.0'
+gem "font-awesome-rails"
+gem "simple_form"
+gem "normalize-rails", "~> 3.0.0"
+gem 'bootstrap-sass', '~> 3.3.5'
 
 #login
 gem 'devise'
