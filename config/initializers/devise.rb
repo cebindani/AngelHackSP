@@ -24,7 +24,7 @@ Devise.setup do |config|
   require 'devise/orm/active_record'
 
   # ==> Configuration for any authentication mechanism
-  # Configure which keys are used when authenticating a user. The default is
+  # Configure whichb  keys are used when authenticating a user. The default is
   # just :email. You can configure it to use [:username, :subdomain], so for
   # authenticating a user, both parameters are required. Remember that those
   # parameters are used only when authenticating and not when retrieving from
