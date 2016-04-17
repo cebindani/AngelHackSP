@@ -1,0 +1,29 @@
+development: &default
+  adapter: postgresql
+  database: future_self
+  encoding: utf8
+  host: localhost
+  min_messages: warning
+  pool: <%= Integer(ENV.fetch("DB_POOL", 5)) %>
+  password: 1234
+  reaping_frequency: <%= Integer(ENV.fetch("DB_REAPING_FREQUENCY", 10)) %>
+  timeout: 5000
+  user: postgres
+  port: 5433
+
+test:
+  <<: *default
+  database: esquemadarua_test
+  password: 1234
+  user: postgres
+  port: 5433
+
+
+production: &deploy
+  encoding: utf8
+  min_messages: warning
+  pool: <%= [Integer(ENV.fetch("MAX_THREADS", 5)), Integer(ENV.fetch("DB_POOL", 5))].max %>
+  timeout: 5000
+  url:  <%= ENV.fetch("DATABASE_URL", "") %>
+
+staging: *deploy

@@ -1,0 +1,227 @@
+@charset "utf-8"
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require_bootstrap
+ *= font_awesome
+ *= freelancer
+ */
+
+// @import "font-awesome";
+
+
+$color1: orange;
+$color2: purple;
+
+$highlight-color: #FFF;
+$highlight-transp: rgba(245,245,245,0.2);
+
+
+//Page Layout
+html{
+  height: 100%;
+}
+
+body, .editor, .menu-list, .main-editor{
+  min-height:100%;
+}
+
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+
+  a:hover{
+    background: none
+  }
+
+
+
+// Menu List
+.menu-list{
+
+  padding: 0px!important;
+  margin: 0px!important;
+  background: $color1;
+  box-shadow: inset -1px 3px 55px 0px rgba(48,44,48,0.45);
+  -moz-box-shadow: inset -1px 3px 55px 0px rgba(48,44,48,0.45);
+  -webkit-box-shadow: inset -1px 3px 55px 0px rgba(48,44,48,0.45);
+
+}
+
+.menu-list nav {
+  padding: 0px!important;
+}
+
+
+
+.menu-list nav li{
+  list-style-type: none;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #222;
+  margin: 0px 0px 20px 0px;
+}
+
+
+/* Main Editor */
+
+.header-sub{
+  font-size: 13px;
+  color: #CCC;
+}
+
+.main-editor header{
+  background: $color2;
+  color:#FFF;
+  box-shadow: inset -1px 3px 55px 0px rgba(48,44,48,0.45);
+  -moz-box-shadow: inset -1px 3px 55px 0px rgba(48,44,48,0.45);
+  -webkit-box-shadow: inset -1px 3px 55px 0px rgba(48,44,48,0.45);
+
+  color: $highlight-color;
+
+  a{
+    color: #FFF;
+  }
+
+  a:hover{
+    color: #FFF;
+    background: none
+  }
+
+  h2{
+    margin-top: 0px;
+    padding: 20px; 
+  }
+
+  .breadcrumb, .breadcrumb li, .breadcrumb li a{
+    color: $highlight-color;
+
+  }
+
+  .breadcrumb{
+    position: relative;
+    top: -20px;
+    color: $highlight-color;
+    background: $highlight-transp;
+    width:  45%;
+    text-align: center;
+    margin: 0 auto 0px auto;
+  }
+
+}
+
+
+// Timeline
+
+.timeline-detail{
+
+  a{
+    color: #333;
+  }
+
+  a:hover{
+    color: #555;
+  }
+
+}
+
+.timeline-detail > div {
+  width: 31%;
+  border-top: 2px solid;
+  margin-left: 10px;
+  margin-right: 1px;
+  padding: 0px;
+
+}
+
+
+
+.timeline-detail  i.checked{
+  color: #000;
+  background: #FFF;
+  content: "\f058";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  top: -48px;
+  text-align: left;
+  left: 0px;
+  font-size: xx-large;
+}
+
+.timeline-detail > div:before{
+  color: #000;
+  content: "\f0da";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  top: -16px;
+  width: 100%;
+  text-align: right;
+  left: 2px;
+  font-size: xx-large;
+}
+
+.timeline-detail h3 {
+  margin: 0px;
+  position: relative;
+  top: -90px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5vw;
+}
+
+
+// item-tasks-list
+
+.item-tasks-list{
+
+  font-size: 18px;
+  border-left: 1px dashed #000;
+  padding-left: 10px;
+  position: relative;
+  left: 12px;
+  top: -75px;
+
+  li:first-child{
+    list-style-type: none;
+    padding-top: 60px;
+  }
+
+
+  li{
+    list-style-type: none;
+    padding: 15px;
+  }
+}
