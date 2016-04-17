@@ -1,19 +1,18 @@
-Grupo future-self
+# Grupo future-self
 
-Nome do projeto: Future Self
+Nome do projeto: **Future Self**
 
-Categoria: SaaS
+Categoria: **SaaS**
 
-Público-alvo: Jovens e adultos ambiciosos em idade profissional 
+Público-alvo: **Jovens e adultos ambiciosos em idade profissional** 
 
-Proposta de valor única: Uma maneira única de analisar suas metas de curto e longo prazo
+Proposta de valor única: **Uma maneira única de analisar suas metas de curto e longo prazo**
 
 Desafio: 
   Nenhum
 
-
 Participantes:
-Alvaro Silva
-Daniele Cebin
-Rodrigo Guerra
-Vitor de Carvalho
+* Alvaro Silva
+* Daniele Cebin
+* Rodrigo Guerra
+* Vitor de Carvalho
