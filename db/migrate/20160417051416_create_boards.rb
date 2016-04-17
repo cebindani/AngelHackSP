@@ -1,5 +1,5 @@
 class CreateBoards < ActiveRecord::Migration
-  def change
+  def self.up
     create_table :boards do |t|
       t.text :title
       t.text :description
@@ -7,5 +7,8 @@ class CreateBoards < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+  end
+   def self.down
+    drop_table :boards
   end
 end
