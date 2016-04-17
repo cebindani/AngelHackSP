@@ -12,6 +12,9 @@ Rails.application.routes.draw do
    root 'welcome#index'
    get 'editor/:id' => 'welcome#editor', as: :editor_task
 
+  devise_scope :user do
+    delete "/users/sign_out" => "devise/sessions#destroy"
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

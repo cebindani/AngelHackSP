@@ -1,18 +1,36 @@
 <div class="container-fluid editor row no-gutters">
-  <div class="col-sm-12 col-md-3 col-lg-2 menu-list">
-    <nav>
-      <ul>
-        <li><a href="">Logo</a></li>
-        <li><a href="">Boards</a></li>
-        <li><%= link_to('Perfil', user_id_path(current_user), :method => :delete) %></li>
-        <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %> </li>
-      </ul>
+  <header class="cd-main-header">
+    <nav class="cd-nav">
+        <%= image_tag "logo/FutureSelf-normal _texto.png", :width => "140px", :class => "cd-logo"%>
+      
     </nav>
-  </div>
-  <div class="col-sm-12 col-md-9 col-lg-10 main-editor">
+  </header>
+<main class="cd-main-content">
+  <nav class="cd-side-nav">
+      <ul>
+
+          <li class="cd-label"><%= image_tag "logo/FutureSelf-normal _icon.png", :width => "140px"%>
+          <%= image_tag "logo/FutureSelf-normal _texto.png", :width => "140px" %>
+          </li>
+          <li class="has-children overview">
+              <a href="#0"><a href="">Boards<span class="count">3</span></a></a>
+          </li>
+          <li class="notifications active">
+              <%= link_to('Home', root_path, :method => :delete) %>
+          </li>
+
+
+          <!-- other list items here -->
+          <li><%= link_to "Sign out", users_sign_out_path, :method => :delete %></li>
+      </ul>
+
+      <!-- other unordered lists here -->
+  </nav>
+
+  <div class="content-wrapper  main-editor">
     <header>
       <h2>
-      <%if !@Task.parent.nil? %>
+      <%if !@Task.nil? && !@Task.parent.nil? %>
         <%= link_to editor_task_path(@Task.parent.id) do %>
           <i style="font-size: 16px;  position: relative;top: -2px;left: -10px;" class="fa fa-chevron-left"></i>
         <% end %>
@@ -51,8 +69,8 @@
    <% end %>
 
     </header>
-    <section class="container">
-      <div class="timeline-detail row">
+    <section>
+      <div class="timeline-detail">
       <%
 
       if @Task.children.length != 0
