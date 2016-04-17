@@ -5,6 +5,8 @@ class WelcomeController < ApplicationController
   end
 
   def editor
+    @Task = Task.find_by_id(params[:id])
 
+    
   end
 end

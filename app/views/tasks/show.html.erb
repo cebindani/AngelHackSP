@@ -26,8 +26,14 @@
 </p>
 
 <p>
-  <strong>Objetivo:</strong>
-  <%= @task.objetivo_id %>
+  <strong>Board:</strong>
+  <%= @task.board_id %>
+</p>
+
+<p>
+  <strong>Pai:</strong>
+  <%= @task.dad %>
+
 </p>
 
 <%= link_to 'Edit', edit_task_path(@task) %> |
