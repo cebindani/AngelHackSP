@@ -9,7 +9,10 @@ Público-alvo: **Jovens e adultos ambiciosos em idade profissional**
 Proposta de valor única: **Uma maneira única de analisar suas metas de curto e longo prazo**
 
 Desafio: 
-  Nenhum
+
+- [ ] Bluemix
+- [ ] GS1
+- [ ] Social
 
 Participantes:
 * Alvaro Silva
